@@ -1,0 +1,453 @@
+/* CSS Document */
+
+#container
+{
+	position:relative;
+	width:250px;
+	background-color:#0F0;
+}
+#Facebook_Bar
+{
+	width: 898px;
+	height:53px;
+	background-color:#3b5998;
+	position:absolute;
+	margin-left:85px;
+	left: -53px;
+	top: 10px;
+}
+#Cover_Photo
+{
+	width: 898px;
+	background-color:#e7ebf2;
+	position:absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 31px;
+	top: 63px;
+	height: 461px;
+}
+#pro{
+	width:160px; height:160px; 
+	background-color:#ffffff;
+	 border-style:solid; 
+	 border-width:1px; 
+	 border-color:#C2C2C2; 
+	 position:absolute; 
+	 bottom: -42px; 
+	 left:54px; 
+	 margin: -162px 0 0 0; 
+	 z-index:2; 
+	 -moz-border-radius: 3px; 
+	 border-radius: 3px;"}
+
+
+#Photo{
+	width:150px; 
+	height:150px; 
+	position:absolute; 
+	margin: auto; 
+	margin-top: 5px; 
+	left: 6px; 
+	top: 3px;}
+.po
+{
+	background-color:#036;
+	height:300px;
+}
+
+#Photo span{
+position:absolute;
+vertical-align:middle;
+text-align:center;
+margin-top:-35px;
+left:25px;
+visibility:hidden;
+}
+
+#Photo:hover span{
+visibility:visible;
+}
+#Basic_Info_Container{
+	position:relative;
+	"background-color:#ffffff; 
+	border-style:solid; 
+	border-width:1px; 
+	border-color:#c4cde0; 
+	padding:15px 15px 40px 15px; 
+	overflow: visible; 
+	margin: 0 0 15px 0;  
+	-moz-border-radius: 3px; 
+	border-radius: 3px;}
+#bi{
+	float: left; 
+	text-align: left;
+	font-size: 16px;
+	 font-weight: bold; 
+	 color:#333333; 
+	 font-family:Lucida Grande,tahoma,verdana,arial,sans-serif; 
+	 margin: 10px 0 25px 20px;
+	}
+#Basic_Info_Container{
+	background-color:#ffffff;
+	position:absolute;
+	border-style:solid;
+	border-width:1px;
+	border-color:#c4cde0;
+	padding:15px 15px 40px 15px;
+	overflow: visible;
+	margin: 0 0 15px 0;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	left: 39px;
+	top: 579px;
+	width: 435px;
+	height: 240px;
+}
+#name{
+	float: left; 
+	text-align: left;
+	font-size: 16px; 
+	font-weight: bold; 
+	color:#333333; 
+	font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+	 margin: 10px 0 25px 20px;
+}
+#edit {
+	float: right; 
+text-align:right;
+    background-color: #666;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius:4px;
+    color:#CCC;
+    font-family: 'Oswald';
+    font-size: 15px;
+    text-decoration: none;
+    cursor: poiner;
+     border:none;
+	  margin: 10px 0 25px 20px;
+}
+#edit:hover {
+    border: none;
+    background:#FFF;
+    box-shadow: 0px 0px 1px #777;
+
+}
+input[type=text]
+{
+	border:2px solid #CCC;
+	border-radius:2px;
+	height: 17px;
+	width: 200px;
+}
+#username{
+	
+float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+
+#firstname{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+#lastname{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+#mobileno{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+
+#phone{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+#coninfo{
+	position:absolute;
+	background-color:#ffffff;
+	border-style:solid;
+	border-width:1px;
+	border-color:#c4cde0;
+	padding:15px 15px 40px 15px;
+	overflow: visible;
+	margin: 0 0 15px 0;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	left: 39px;
+	top: 880px;
+	width: 436px;
+	height: 272px;
+}
+#contactinfo{
+	float: left; 
+	text-align: left;
+	font-size: 16px; 
+	font-weight: bold; 
+	color:#333333; 
+	font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+	 margin: 10px 0 25px 20px;
+}
+#email{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+#website{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+#twitter{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+#facebook{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+#paypal{
+	float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+#submit {
+    background-color: #666;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: poiner;
+     border:none;
+}
+#submit:hover {
+    border: none;
+    background:#63707e;
+    box-shadow: 0px 0px 1px #777;
+
+}
+#CompanyInfo{
+	position:absolute;
+	background-color:#ffffff;
+	border-style:solid;
+	border-width:1px;
+	border-color:#c4cde0;
+	padding:15px 15px 40px 15px;
+	overflow: visible;
+	margin: 0 0 15px 0;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	left: 509px;
+	top: 539px;
+	width: 397px;
+	height: 279px;
+}
+
+#cominfo{
+	float: left; 
+	text-align: left;
+	font-size: 16px; 
+	font-weight: bold; 
+	color:#333333; 
+	font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+	 margin: 10px 0 25px 20px;
+}
+
+#companyname{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+#compemail{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+#website{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+#address{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+#contact{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+#registraction{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+#Changepassword{
+	position:absolute;
+	background-color:#ffffff;
+	border-style:solid;
+	border-width:1px;
+	border-color:#c4cde0;
+	padding:15px 15px 40px 15px;
+	overflow: visible;
+	margin: 0 0 15px 0;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	left: 511px;
+	top: 879px;
+	width: 397px;
+	height: 273px;
+}
+
+#changepass{
+	float: left; 
+	text-align: left;
+	font-size: 16px; 
+	font-weight: bold; 
+	color:#333333; 
+	font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+	 margin: 10px 0 25px 20px;
+}
+
+#oldpassword{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+#newpassword{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}
+
+#Conformpass{float: left; 
+text-align: left;
+ vertical-align: top; 
+ width: 105px; 
+ font-size: 12px; 
+ font-weight: bold; 
+ color:#666; 
+ font-family:Lucida Grande,tahoma,verdana,arial,sans-serif;
+  margin:5px 0 5px 10px;
+}

@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="css/styles.css" type="text/css">   
+            <script type="text/javascript" src="js/Userprofile/modernizr.custom.79639.js"></script>
+            <script type="text/javascript" src="js/auth014.js"></script>
+            <script type="text/javascript" async="" src="js/ga.js">
+            </script><script src="js/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+            <script src="js/packages.js"></script>
+            <script src="js/jquery.fancybox.pack.js"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+            <title>BizAd Registration</title>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    (function($) {
+                        $.InFieldLabels = function(label, field, options) {
+                            var base = this;
+                            base.$label = $(label);
+                            base.$field = $(field);
+                            base.$label.data("InFieldLabels", base);
+                            base.showing = true;
+                            base.init = function() {
+                                base.options = $.extend({}, $.InFieldLabels.defaultOptions, options);
+                                base.$label.css('position', 'absolute');
+                                var fieldPosition = base.$field.position();
+                                base.$label.css({'left': fieldPosition.left, 'top': fieldPosition.top}).addClass(base.options.labelClass);
+                                if (base.$field.val() != "") {
+                                    base.$label.hide();
+                                    base.showing = false;
+                                }
+                                ;
+                                base.$field.focus(function() {
+                                    base.fadeOnFocus();
+                                }).blur(function() {
+                                    base.checkForEmpty(true);
+                                }).bind('keydown.infieldlabel', function(e) {
+                                    base.hideOnChange(e);
+                                }).change(function(e) {
+                                    base.checkForEmpty();
+                                }).bind('onPropertyChange', function() {
+                                    base.checkForEmpty();
+                                });
+                            };
+                            base.fadeOnFocus = function() {
+                                if (base.showing) {
+                                    base.setOpacity(base.options.fadeOpacity);
+                                }
+                                ;
+                            };
+                            base.setOpacity = function(opacity) {
+                                base.$label.stop().animate({opacity: opacity}, base.options.fadeDuration);
+                                base.showing = (opacity > 0.0);
+                            };
+                            base.checkForEmpty = function(blur) {
+                                if (base.$field.val() == "") {
+                                    base.prepForShow();
+                                    base.setOpacity(blur ? 1.0 : base.options.fadeOpacity);
+                                }
+                                else {
+                                    base.setOpacity(0.0);
+                                }
+                                ;
+                            };
+                            base.prepForShow = function(e) {
+                                if (!base.showing) {
+                                    base.$label.css({opacity: 0.0}).show();
+                                    base.$field.bind('keydown.infieldlabel', function(e) {
+                                        base.hideOnChange(e);
+                                    });
+                                }
+                                ;
+                            };
+                            base.hideOnChange = function(e) {
+                                if ((e.keyCode == 16) || (e.keyCode == 9))
+                                    return;
+                                if (base.showing) {
+                                    base.$label.hide();
+                                    base.showing = false;
+                                }
+                                ;
+                                base.$field.unbind('keydown.infieldlabel');
+                            };
+                            base.init();
+                        };
+                        $.InFieldLabels.defaultOptions = {fadeOpacity: 0.5, fadeDuration: 300, labelClass: 'infield'};
+                        $.fn.inFieldLabels = function(options) {
+                            return this.each(function() {
+                                var for_attr = $(this).attr('for');
+                                if (!for_attr)
+                                    return;
+                                var $field = $("input#" + for_attr + "[type='text']," + "input#" + for_attr + "[type='password']," + "input#" + for_attr + "[type='tel']," + "input#" + for_attr + "[type='email']," + "textarea#" + for_attr);
+                                if ($field.length == 0)
+                                    return;
+                                (new $.InFieldLabels(this, $field[0], options));
+                            });
+                        };
+                    })(jQuery);
+                    $("#RegisterUserForm label").inFieldLabels();
+                });
+
+            </script>
+
+            <style type="text/css">
+                #user-nav LI:first-child
+                {
+                    float:none;
+                    border-left: none;
+                    text-align:center;
+                }
+                /* Add whatever you need to your CSS reset */
+                html, body, h1, form, fieldset, input {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                }
+
+                body {
+                    width:1366px;
+                    position:absolute;
+                }
+
+                #registration {
+                    color: #000;
+                    background: #CFCFCF;
+                    margin-left:14%;
+                    margin-bottom:1%;
+                    border: solid #999 1px;
+                    width: 568px;
+                    -webkit-border-radius:3px;
+                    -moz-border-radius:3px;
+                    border-radius:3px;
+                    -moz-box-shadow: 1px 1px 1px 1px #999;
+                    -webkit-box-shadow: 1px 1px 1px 1px #999;
+                }
+
+                #registration a {
+                    color: #8c910b;
+                    text-shadow: 0px -1px 0px #000;
+                }
+
+                #registration fieldset {
+                    padding: 10px;
+                }
+
+                input.text {
+                    -webkit-border-radius: 15px;
+                    -moz-border-radius: 15px;
+                    border-radius: 15px;
+                    border:solid 1px #444;
+                    font-size: 14px;
+                    width:90%;
+                    padding: 7px 8px 7px 30px;
+                    -moz-box-shadow: 0px 1px 0px #777;
+                    -webkit-box-shadow: 0px 1px 0px #777;
+                    background: #ddd url('images/inputSprite.png') no-repeat 4px 5px;
+                    background: url('images/inputSprite.png') no-repeat 4px 5px, -moz-linear-gradient(
+                        center bottom,
+                        rgb(225,225,225) 0%,
+                        rgb(215,215,215) 54%,
+                        rgb(173,173,173) 100%
+                        );
+                    background:  url('images/inputSprite.png') no-repeat 4px 5px, -webkit-gradient(
+                        linear,
+                        left bottom,
+                        left top,
+                        color-stop(0, rgb(225,225,225)),
+                        color-stop(0.54, rgb(215,215,215)),
+                        color-stop(1, rgb(173,173,173))
+                        );
+                    color:#333;
+                    text-shadow:0px 1px 0px #FFF;
+                }	  
+
+                input#email { 
+                    background-position: 4px 5px; 
+                    background-position: 4px 5px, 0px 0px;
+                }
+
+                input#password { 
+                    background-position: 4px -20px; 
+                    background-position: 4px -20px, 0px 0px;
+                }
+                input#repassword { 
+                    background-position: 4px -20px; 
+                    background-position: 4px -20px, 0px 0px;
+                }
+
+                input#name { 
+                    background-position: 4px -46px; 
+                    background-position: 4px -46px, 0px 0px; 
+                }
+
+                input#tel { 
+                    background-position: 4px -76px; 
+                    background-position: 4px -76px, 0px 0px; 
+                }
+
+                #registration h1{
+                    color: #333;
+                    text-shadow: 0px -1px 0px #000;
+                    border-bottom: solid #181818 1px;
+                    -moz-box-shadow: 0px 1px 0px #3a3a3a;
+                    text-align: left;
+                    padding: 10px;
+                    margin-left: 0px;
+                    font-weight: normal;
+                    font-size: 30px;
+                    font-family:Cambria;
+                    background:  url('images/logo.png') no-repeat 1px 2px;
+                    background-size:90px;
+                    background-position:right;
+                    background-origin:padding-box;
+                }
+
+                #registerNew {
+                    width: 203px;
+                    height: 42px;
+                    border: none;
+                    text-indent: -9999px;
+                    background: url('images/Sign Up.png') no-repeat;
+                    cursor: pointer;
+                    float: right;
+                }
+
+                #registerNew:hover { background-position: 0px -41px; }
+                #registerNew:active { background-position: 0px -82px; }
+
+                #registration p {
+                    position: relative;
+                }
+
+                fieldset label.infield /* .infield label added by JS */ {
+                    color: #333;
+                    text-shadow: 0px 1px 0px #fff;
+                    position:relative;
+                    text-align: left;
+                    top: 3px !important;
+                    left: 35px !important;
+                    line-height: 29px;
+                }
+
+            </style>
+
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="user-nav">
+                <div>
+                    <ul>
+                        <li><a href="Signin.html">Login</a></li>
+                    </ul>
+                    <a class="single-link" target="_blank" href="#"><span>The BizAd Group</span></a>
+                </div>
+            </div>
+
+
+            <header role="banner">
+                <div id="header_container">
+                    <div>
+                        <p id="logo">
+                            <!--<a href="./Digital Advertising Portal - The Economist - Home_files/Digital Advertising Portal - The Economist - Home.htm"><img src="./Digital Advertising Portal - The Economist - Home_files/logo.png" alt="The Economist Group: Media information"></a>-->
+                            <image src="images/Biz.png"/><span>Advertisement And Marketing</span>                                                        
+                        </p>
+                        <nav id="main-nav">
+                            <ul>
+                                <li class="home selected"><a href="index.php"><image src="images/home.png"/></a></li>
+                                <li><a href="#"><span>PortFolio</span></a></li>
+                                <li><a href="#"><span>Ad Post</span></a></li>
+                                <li><a href="#"><span>Services</span></a></li>
+                                <li><a href="#"><span>Contact Us</span></a></li>
+                                <li><a href="#"><span>FAQs</span></a></li>
+                                <li><a href="#"><span>Blogs</span></a></li>
+                            </ul>
+                        </nav>
+                        <select id="main-nav-mobile"><option selected="selected" value="/">Home</option><option value="/specifications-resources">Specifications &amp; Resources</option><option value="/news">Latest News</option><option value="/contact-us">Contact Us</option></select>
+                    </div>
+                </div>
+            </header>
+            <div id="header-border">
+                <div>
+                    <a class="header-Dictionary" id="dictionary" href="#" style="display: inline;"><span><image src="images/search.png"/> BizAd Dictionary</span></a>
+                    <a class="header-Adpost" id="Adpost" href="AdPost.html" style="display: inline;"><span>Post Classified Ad</span></a>
+                    <a class="header-Sitemap" id="Sitemap" href="index.php" style="display: inline;"><span>&lt;&lt;Site Map</span></a>
+                </div>
+            </div>
+            <div id="registration" >
+                <h1>Register</h1>
+                <form id="RegisterUserForm" action="" method="post">
+                    <fieldset>
+                        <p>
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" class="text" value="" />
+                        </p>
+
+                        <p>
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" class="text" value="" />
+                        </p>        
+                        <p>
+                            <label for="tel">Phone Number</label>
+                            <input id="tel" name="tel" type="tel" class="text" value="" />
+                        </p>
+
+
+                        <p>
+                            <label for="password">Password</label>
+                            <input id="password" name="password" class="text" type="password" />
+                        </p>
+                        <p>
+                            <label for="password"> ReEnter Password</label>
+                            <input id="repassword" name="repassword" class="text" type="password" />
+                        </p>
+                        <hr/>
+                        <p><input id="acceptTerms" name="acceptTerms" type="checkbox" />
+                            <label for="acceptTerms">
+                                I agree to the <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a>
+                            </label>
+                        </p>
+
+                        <p>
+                            <button id="registerNew" type="submit">Register</button>
+                        </p>
+                    </fieldset>
+
+                </form>
+            </div>
+            <footer role="contentinfo">
+                <div class="clearfix">
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="http://ads.economist.com/terms-and-conditions">Terms &amp; Conditions</a></li>
+                            <li><a href="http://ads.economist.com/site-map">Site Map</a></li>
+                            <li><a href="http://www.economistgroup.com/results_and_governance/governance/privacy/" target="_blank">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">	
+                        <h5>Find Us</h5>
+                        <ul>
+                            <li><a href="https://www.facebook.com/TheEconomist">Facebook</a></li>
+                            <li><a class="tw" href="https://twitter.com/TheEconomist">Twitter</a></li>
+                            <li><a class="yt" href="http://www.youtube.com/user/EconomistMagazine">YouTube</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-company">
+                        <a href="./Digital Advertising Portal - The Economist - Home_files/Digital Advertising Portal - The Economist - Home.htm"><img src="./Digital Advertising Portal - The Economist - Home_files/footer-logo.png" alt="The Economist Group: Media information"></a>
+                        <p>
+                            Copyright © 2013 – The Economist Newspaper Limited<br>
+                                VAT Reg No: GB 340 436 876
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            <div id="site-socials">
+                <ul>
+                    <li><a class="sh addthis_button_compact at300m" href="http://ads.economist.com/#none"><em>Share page</em></a></li>
+                    <li><a class="fb" href="https://www.facebook.com/TheEconomist">Facebook</a></li>
+                    <li><a class="tw" href="https://twitter.com/TheEconomist">Twitter</a></li>
+                    <li><a class="yt" href="http://www.youtube.com/user/EconomistMagazine">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script>buildNav();</script>
+        <script src="js/main.js"></script>
+        <script src="js/addthis_widget.js"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh691" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="other/sh136.htm"></iframe></div><script type="text/javascript" src="js/core094.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+
+                (function($) {
+                    $.InFieldLabels = function(label, field, options) {
+                        var base = this;
+                        base.$label = $(label);
+                        base.$field = $(field);
+                        base.$label.data("InFieldLabels", base);
+                        base.showing = true;
+                        base.init = function() {
+                            base.options = $.extend({}, $.InFieldLabels.defaultOptions, options);
+                            base.$label.css('position', 'absolute');
+                            var fieldPosition = base.$field.position();
+                            base.$label.css({'left': fieldPosition.left, 'top': fieldPosition.top}).addClass(base.options.labelClass);
+                            if (base.$field.val() != "") {
+                                base.$label.hide();
+                                base.showing = false;
+                            }
+                            ;
+                            base.$field.focus(function() {
+                                base.fadeOnFocus();
+                            }).blur(function() {
+                                base.checkForEmpty(true);
+                            }).bind('keydown.infieldlabel', function(e) {
+                                base.hideOnChange(e);
+                            }).change(function(e) {
+                                base.checkForEmpty();
+                            }).bind('onPropertyChange', function() {
+                                base.checkForEmpty();
+                            });
+                        };
+                        base.fadeOnFocus = function() {
+                            if (base.showing) {
+                                base.setOpacity(base.options.fadeOpacity);
+                            }
+                            ;
+                        };
+                        base.setOpacity = function(opacity) {
+                            base.$label.stop().animate({opacity: opacity}, base.options.fadeDuration);
+                            base.showing = (opacity > 0.0);
+                        };
+                        base.checkForEmpty = function(blur) {
+                            if (base.$field.val() == "") {
+                                base.prepForShow();
+                                base.setOpacity(blur ? 1.0 : base.options.fadeOpacity);
+                            } else {
+                                base.setOpacity(0.0);
+                            }
+                            ;
+                        };
+                        base.prepForShow = function(e) {
+                            if (!base.showing) {
+                                base.$label.css({opacity: 0.0}).show();
+                                base.$field.bind('keydown.infieldlabel', function(e) {
+                                    base.hideOnChange(e);
+                                });
+                            }
+                            ;
+                        };
+                        base.hideOnChange = function(e) {
+                            if ((e.keyCode == 16) || (e.keyCode == 9))
+                                return;
+                            if (base.showing) {
+                                base.$label.hide();
+                                base.showing = false;
+                            }
+                            ;
+                            base.$field.unbind('keydown.infieldlabel');
+                        };
+                        base.init();
+                    };
+                    $.InFieldLabels.defaultOptions = {fadeOpacity: 0.5, fadeDuration: 300, labelClass: 'infield'};
+                    $.fn.inFieldLabels = function(options) {
+                        return this.each(function() {
+                            var for_attr = $(this).attr('for');
+                            if (!for_attr)
+                                return;
+                            var $field = $("input#" + for_attr + "[type='text']," + "input#" + for_attr + "[type='password']," + "input#" + for_attr + "[type='tel']," + "input#" + for_attr + "[type='email']," + "textarea#" + for_attr);
+                            if ($field.length == 0)
+                                return;
+                            (new $.InFieldLabels(this, $field[0], options));
+                        });
+                    };
+                })(jQuery);
+
+
+                $("#RegisterUserForm label").inFieldLabels();
+            });
+
+        </script>
+
+    </body>
+</html>
